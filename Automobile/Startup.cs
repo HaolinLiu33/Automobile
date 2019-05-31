@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using Automobile.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using automobile.Data;
 
 namespace Automobile
 {
@@ -42,7 +43,22 @@ namespace Automobile
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddCors(o => o.AddPolicy("Automobilepolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            }));
+
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc()
+                .AddJsonOptions(
+                options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopling.Ignore);
+        }
+
+        private void AllowAnyHeader()
+        {
+            throw new NotImplementedException();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,6 +81,10 @@ namespace Automobile
             app.UseCookiePolicy();
 
             app.UseAuthentication();
+
+            DummyData.Initialize(app);
+
+            app.UseCors("Automobilepolicy");
 
             app.UseMvc(routes =>
             {

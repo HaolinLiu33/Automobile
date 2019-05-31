@@ -45,7 +45,7 @@ namespace automobile.Data
                 Name="BMW",
             },
             new automobile_brand() {
-                Name="Volkswagen",
+                Name="porsche",
             }
         };
 
@@ -56,49 +56,49 @@ namespace automobile.Data
         {
             List<product> automobile_brands = new List<product>() {
             new product() {
-                productName = "China",
-                country_of_origin = "BeiJing",
-                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "Asia").automobile_brandId,
+                productName = "porsche cayenne",
+                country_of_origin = "Germany",
+                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "porsche").automobile_brandId,
             },
          new product() {
-                productName = "China",
-                country_of_origin = "BeiJing",
-                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "Asia").automobile_brandId,
+                productName = "porsche 911",
+                country_of_origin = "Germany",
+                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "porsche").automobile_brandId,
         },
               new product() {
-                productName = "China",
-                country_of_origin = "BeiJing",
-                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "Asia").automobile_brandId,
+                productName = "porsche 918",
+                country_of_origin = "Germany",
+                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "porsche").automobile_brandId,
               },
                new product() {
-                productName = "China",
-                country_of_origin = "BeiJing",
-                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "Asia").automobile_brandId,
+                productName = "Benz GLA SUV",
+                country_of_origin = "Germany",
+                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "Benz").automobile_brandId,
               },
                 new product() {
-                productName = "China",
-                country_of_origin = "BeiJing",
-                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "Asia").automobile_brandId,
+                productName = "Benz GLC L SUV",
+                country_of_origin = "Germany",
+                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "Benz").automobile_brandId,
               },
                  new product() {
-                productName = "China",
-                country_of_origin = "BeiJing",
-                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "Asia").automobile_brandId,
+                productName = "Benz S",
+                country_of_origin = "Germany",
+                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "Benz").automobile_brandId,
               },
                  new product() {
-                productName = "China",
-                country_of_origin = "BeiJing",
-                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "Asia").automobile_brandId,
+                productName = "BMW X5",
+                country_of_origin = "Germany",
+                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "BMW").automobile_brandId,
               },
                   new product() {
-                productName = "China",
-                country_of_origin = "BeiJing",
-                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "Asia").automobile_brandId,
+                productName = "BMW X6",
+                country_of_origin = "Germany",
+                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "BMW").automobile_brandId,
               },
                new product() {
-                productName = "China",
-                country_of_origin = "BeiJing",
-                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "Asia").automobile_brandId,
+                productName = "BMW X7",
+                country_of_origin = "Germany",
+                automobile_brandId = context.automobile_brands.FirstOrDefault(t => t.Name == "BMW").automobile_brandId,
               },
             };
 
